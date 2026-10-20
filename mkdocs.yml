@@ -1,1 +1,194 @@
-site_name: My Docs
+site_name: TIMDoX
+site_url: https://prof-inter-web.github.io/timdox/
+copyright: Techniques d’intégration multimédia | Collège Montmorency
+
+theme:
+  name: material
+  logo: _/logo-tim2.svg   # chemin relatif depuis docs/
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.indexes  # Permet au titre de la section d'être un lien cliquable
+    - navigation.sections # Crée une séparation visuelle plus nette (lifted)
+    - content.code.copy
+  language: fr  # Change toutes les étiquettes par défaut en français
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - md_in_html
+  - admonition
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - mdx_truly_sane_lists
+  - pymdownx.arithmatex:
+      generic: true
+  
+
+extra:
+  generator: false
+  analytics:
+    provider: google
+    property: G-BFKT7FS4P2
+  include:
+    - robots.txt
+
+extra_css:
+  - https://unpkg.com/tippy.js@6/animations/shift-away.css
+  - https://unpkg.com/lightgallery@2.8.2/css/lightgallery.css
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css
+  - _/extra.css
+
+extra_javascript:
+  - _/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - https://unpkg.com/fireworks-js@2.x/dist/index.umd.js
+  - https://unpkg.com/lightgallery@2.8.2/lightgallery.min.js
+  - https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js
+  - https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js
+  - _/extra.js
+  - _/image-zoom.js
+  - _/gallery.js
+  - _/tooltip.js
+  - _/color-preview.js
+
+plugins:
+  - material/offline
+  - material/tags
+  - material/typeset
+  - mkdocs-video:
+      is_video: true
+      video_autoplay: true
+      video_loop: true
+      video_muted: true
+  - mkdocs-audio
+  - render-stopper:
+      tag: "[STOP]"
+
+nav:
+  - Web 1:
+      - Web 1: 582-111-web1/index.md
+      - Cours 1: 582-111-web1/cours01.md
+      - Cours 2: 582-111-web1/cours02.md
+      - Cours 3: 582-111-web1/cours03.md
+      - Cours 4: 582-111-web1/cours04.md
+      - Cours 5: 582-111-web1/cours05.md
+      - Cours 6: 582-111-web1/cours06.md
+      - Cours 7: 582-111-web1/cours07.md
+      - Cours 8: 582-111-web1/cours08.md
+      - Cours 9: 582-111-web1/cours09.md
+      - Cours 10: 582-111-web1/cours10.md
+      - Cours 11: 582-111-web1/cours11.md
+      - Cours 12: 582-111-web1/cours12.md
+      - Cours 13: 582-111-web1/cours13.md
+      - Cours 14: 582-111-web1/cours14.md
+      - Cours 15: 582-111-web1/cours15.md
+  - Web 2:
+      - Web 2: 582-211-web2/index.md
+      - Cours 1: 582-211-web2/cours01.md
+      - Cours 2: 582-211-web2/cours02.md
+      - Cours 3: 582-211-web2/cours03.md
+      - Cours 4: 582-211-web2/cours04.md
+      - Cours 5: 582-211-web2/cours05.md
+      - Cours 6: 582-211-web2/cours06.md
+      - Cours 7: 582-211-web2/cours07.md
+      - Cours 8: 582-211-web2/cours08.md
+      - Cours 9: 582-211-web2/cours09.md
+      - Cours 10: 582-211-web2/cours10.md
+      - Cours 11: 582-211-web2/cours11.md
+      - Cours 12: 582-211-web2/cours12.md
+      - Cours 13: 582-211-web2/cours13.md
+      - Cours 14: 582-211-web2/cours14.md
+      - Cours 15: 582-211-web2/cours15.md
+  - Web 4:
+      - Web 4: 582-411-web4/index.md
+      - Cours 1: 582-411-web4/cours01.md
+      - Cours 2: 582-411-web4/cours02.md
+      - Cours 3: 582-411-web4/cours03.md
+      - Cours 4: 582-411-web4/cours04.md
+      - Cours 5: 582-411-web4/cours05.md
+      - Cours 6: 582-411-web4/cours06.md
+      - Cours 7: 582-411-web4/cours07.md
+      - Cours 8: 582-411-web4/cours08.md
+      - Cours 9: 582-411-web4/cours09.md
+      - Cours 10: 582-411-web4/cours10.md
+      - Cours 11: 582-411-web4/cours11.md
+      - Cours 12: 582-411-web4/cours12.md
+      - Cours 13: 582-411-web4/cours13/index.md
+      - Cours 14: 582-411-web4/cours14/index.md
+      - Cours 15: 582-411-web4/cours15/index.md
+  - Audio 1:
+      - Audio 1: 582-131-audio1/index.md
+      - Cours 1: 582-131-audio1/cours01.md
+      - Cours 2: 582-131-audio1/cours02.md
+      - Cours 3: 582-131-audio1/cours03.md
+      - Cours 4: 582-131-audio1/cours04.md
+      - Cours 5: 582-131-audio1/cours05.md
+      - Cours 6: 582-131-audio1/cours06.md
+      - Cours 7: 582-131-audio1/cours07.md
+      - Cours 8: 582-131-audio1/cours08.md
+      - Cours 9: 582-131-audio1/cours09.md
+      - Cours 10: 582-131-audio1/cours10.md
+      - Cours 11: 582-131-audio1/cours11.md
+      - Cours 12: 582-131-audio1/cours12.md
+      - Cours 13: 582-131-audio1/cours13/index.md
+      - Cours 14: 582-131-audio1/cours14/index.md
+      - Cours 15: 582-131-audio1/cours15/index.md
+  - Traitement Audiovisuel:
+      - Traitement Audiovisuel: 582-412-traitement-audiovisuel/index.md
+      - Cours 1: 582-412-traitement-audiovisuel/cours01.md
+      - Cours 2: 582-412-traitement-audiovisuel/cours02.md
+      - Cours 3: 582-412-traitement-audiovisuel/cours03.md
+      - Cours 4: 582-412-traitement-audiovisuel/cours04.md
+      - Cours 5: 582-412-traitement-audiovisuel/cours05.md
+      - Cours 6: 582-412-traitement-audiovisuel/cours06.md
+      - Cours 7: 582-412-traitement-audiovisuel/cours07.md
+      - Cours 8: 582-412-traitement-audiovisuel/cours08.md
+      - Cours 9: 582-412-traitement-audiovisuel/cours09.md
+      - Cours 10: 582-412-traitement-audiovisuel/cours10.md
+      - Cours 11: 582-412-traitement-audiovisuel/cours11.md
+      - Cours 12: 582-412-traitement-audiovisuel/cours12.md
+      - Cours 13: 582-412-traitement-audiovisuel/cours13/index.md
+      - Cours 14: 582-412-traitement-audiovisuel/cours14/index.md
+      - Cours 15: 582-412-traitement-audiovisuel/cours15/index.md
